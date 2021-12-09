@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 
 const app = express();
-app.use('/user', user);
+const user = require('./routers/userRouter');
 
 app.use(express.json());
 app.get('/', (request, response) => {
